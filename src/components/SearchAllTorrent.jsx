@@ -35,7 +35,7 @@ const SearchAllTorrent = () => {
     setResults([]);
 
     try {
-      const response = await fetch(`${apiEndpoints[source]}?q=${query}&page=${page}&nsfw=false`);
+      const response = await fetch(`${apiEndpoints[source]}?q=${query}&page=${page}&nsfw=true`);
       const data = await response.json();
 
       setResults(data.torrents || []);
